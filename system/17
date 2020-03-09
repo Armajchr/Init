@@ -1,0 +1,1 @@
+ssh <usr-name>@<ip-address> -p <num-port>

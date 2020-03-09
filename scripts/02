@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo passwd -l toto
+killall -KILL -u toto
+sudo userdel -r toto
+sudo crontab -r -u toto

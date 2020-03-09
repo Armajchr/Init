@@ -1,0 +1,37 @@
+#!/bin/bash
+
+if [ ! -e auteur ]
+then
+	echo "\033[31mIl manque le fichier auteur\033[0m"
+else
+	echo "\033[32m[OK]\033[0m \033[33mFichier auteur !\033[0m"
+fi
+
+if [ ! -e Makefile ]
+then
+	echo "\033[31mIl manque le Makefile\033[0m"
+else
+	echo "\033[32m[OK]\033[0m \033[33mMakefile\033[0m"
+fi
+
+if [ -e *.o ]
+then
+	echo "\033[31mWarning: .o files still in the folder !\033[0m"
+else
+	echo "\033[32m[OK]\033[0m \033[33m*.o check !\033[0m"
+fi
+
+if [ -e *.swp ]
+then
+	echo "\033[31mWarning: Hidden files in the folder !\033[0m"
+else
+	echo "\033[32m[OK]\033[0m \033[33mhidden files check ! \033[0m"
+fi
+
+norminette | grep Error
+if [  $? = 0 ]
+then
+	echo "\033[31mCheckout Norme !\033[0m"
+else
+	echo "\033[32m[OK]\033[0m \033[33mNorme !\033[0m"
+fi

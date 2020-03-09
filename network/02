@@ -1,0 +1,2 @@
+ifconfig | grep broadcast | awk '{print$NF}'
+ifconfig | grep inet | grep netmask | awk '{print$2}'

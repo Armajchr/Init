@@ -1,0 +1,14 @@
+autovt@
+console-setup
+cron
+getty@
+irqbalance
+keyboard-setup
+networking
+rsyslog
+ssh
+sshd
+syslog
+systemd-timesyncd
+vboxadd
+vboxadd
